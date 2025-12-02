@@ -1,0 +1,102 @@
+/* General Section Styles */
+.stripe-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.tag {
+    color: #635bff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #06102b;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #475467;
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Each Card */
+.card {
+    background: #ffffff;
+    width: 32%;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 15px 20px 10px;
+    font-weight: 700;
+    color: #06102b;
+}
+
+.card p {
+    color: #475467;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 20px 20px;
+}
+
+.card a {
+    color: #635bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Card Images */
+.card-img {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder images (replace with your own if needed) */
+.img1 {
+    background-image: url('https://i.ibb.co/6W5Dszj/stripe1.png');
+}
+
+.img2 {
+    background-image: url('https://i.ibb.co/BnG7xG4/stripe2.png');
+}
+
+.img3 {
+    background-image: url('https://i.ibb.co/1q6ZbYz/stripe3.png');
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+    .main-title {
+        font-size: 28px;
+    }
+}
