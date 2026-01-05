@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solus | Mental Well-being</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --teal:#003033;
+  --peach:#F9EAD7;
+  --bg:#F8F7F4;
+  --orange:#F28C70;
+}
+
+body{
+  font-family:'Bricolage Grotesque',sans-serif;
+  background:var(--bg);
+  color:var(--teal);
+}
+
+/* GENERAL */
+.section{
+  padding:100px 0;
+}
+.btn-solus{
+  background:var(--orange);
+  color:#fff;
+  border-radius:50px;
+  padding:14px 40px;
+  font-weight:600;
+}
+.card-soft{
+  background:#fff;
+  border-radius:36px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,.04);
+  height:100%;
+}
+
+/* NAVBAR */
+.navbar{
+  padding:24px 0;
+  background:var(--bg);
+}
+.navbar-brand{
+  font-weight:800;
+  font-size:2rem;
+}
+
+/* HERO */
+.hero{
+  background:var(--peach);
+  border-radius:48px;
+  padding:80px 0;
+  margin:40px auto;
+  max-width:1240px;
+  max-height:668px;;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-img{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  max-height:px;
+  width:auto;
+}
+
+.hero-img.left{
+  left:0;
+}
+
+.hero-img.right{
+  right:0;
+}
+
+
+/* ABOUT */
+.about-box{
+  background:#fff;
+  border-radius:48px;
+  padding:70px;
+}
+
+/* SERVICES */
+.service-icon{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+/* CTA */
+.cta{
+  background:
+    linear-gradient(rgba(0,48,51,.7),rgba(0,48,51,.7)),
+    url('footer.PNG') center/cover;
+  border-radius:48px;
+  padding:80px;
+  color:white;
+}
+
+/* FOOTER */
+.footer{
+  background:#fff;
+  border-radius:48px;
+  padding:60px;
+}
+.footer-dark{
+  background:var(--teal);
+  color:white;
+  border-radius:48px;
+  padding:60px;
+}
+.footer-input{
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:50px;
+  padding:14px 22px;
+  color:white;
+  width:100%;
+  max-width:380px;
+  margin-bottom:16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Solus</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+      </ul>
+      <button class="btn btn-outline-dark rounded-pill px-4 fw-bold">Contact</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<!-- HERO -->
+<section class="hero container">
+
+    <img src="Illustration_2.png" class="hero-img left d-none d-lg-block">
+    <img src="Illustration_1.png" class="hero-img right d-none d-lg-block">
+  
+    <div class="row justify-content-center">
+      <div class="col-lg-5 text-center">
+        <h1 class="display-5 fw-bold mb-4">
+          Support for Your<br>Mental Well-being
+        </h1>
+        <p class="lead opacity-75 mb-4">
+          Connect with licensed therapists and coaches who care.
+        </p>
+        <a href="#" class="btn btn-solus">Get Started</a>
+      </div>
+    </div>
+  
+  </section>
+  
+
+<!-- ABOUT -->
+<section class="section container">
+  <div class="about-box text-center">
+    <p class="fw-bold small text-uppercase">About Solus</p>
+    <h2 class="display-6 fw-bold mb-4">
+      A Safe Space for Healing & Growth
+    </h2>
+    <p class="text-muted mx-auto" style="max-width:700px">
+      Solus is built to make mental health support accessible, personal,
+      and judgment-free. We combine professional care with modern tools
+      to support your journey.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section container">
+  <div class="text-center mb-5">
+    <p class="fw-bold small text-uppercase">Services</p>
+    <h2 class="display-6 fw-bold">How We Support You</h2>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card-soft text-center">
+        <div class="service-icon">🧠</div>
+        <h4>Therapy Sessions</h4>
+        <p class="text-muted">
+          One-on-one sessions with licensed professionals.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-soft text-center">
+        <div class="service-icon">💬</div>
+        <h4>Coaching</h4>
+        <p class="text-muted">
+          Practical guidance to navigate daily challenges.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-soft text-center">
+        <div class="service-icon">📚</div>
+        <h4>Resources</h4>
+        <p class="text-muted">
+          Tools, articles, and exercises for self-care.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section container">
+  <div class="row mb-4">
+    <div class="col">
+      <p class="fw-bold small text-uppercase">Resources</p>
+      <h2 class="display-6 fw-bold">Explore & Learn</h2>
+    </div>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card-soft">
+        <h5>Understanding Anxiety</h5>
+        <p class="text-muted">Learn how to manage stress and calm your mind.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-soft">
+        <h5>The Power of Sleep</h5>
+        <p class="text-muted">Why rest is essential for mental health.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-soft">
+        <h5>Building Resilience</h5>
+        <p class="text-muted">Strengthen your emotional foundation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section container">
+  <div class="cta">
+    <h2 class="display-6 fw-bold mb-4">
+      You Don’t Have to Do This Alone
+    </h2>
+    <p class="opacity-75 mb-4">
+      Get matched with a professional and begin your journey today.
+    </p>
+    <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">
+      Find Support Now
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="container py-5">
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="footer h-100">
+        <h2 class="fw-bold">Solus</h2>
+        <p class="text-muted mt-3">
+          Mental health support designed for modern life.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="footer-dark h-100">
+        <h4 class="fw-bold mb-3">Stay Connected</h4>
+        <input class="footer-input" type="email" placeholder="Your email">
+        <button class="btn btn-light rounded-pill px-4 fw-bold">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
