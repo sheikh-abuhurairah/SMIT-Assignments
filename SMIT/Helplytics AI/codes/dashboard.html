@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpHub AI | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body data-page="dashboard">
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="container nav">
+          <a class='brand' href='index.html'><span class="brand-badge">H</span><span>HelpHub AI</span></a>
+          <nav class="nav-links">
+            <a data-nav='dashboard' href='dashboard.html'>Dashboard</a>
+            <a href='explore.html'>Explore</a>
+            <a href='create-request.html'>Create Request</a>
+            <a href='messages.html'>Messages</a>
+            <a href='profile.html'>Profile</a>
+          </nav>
+          <div class="nav-actions"><a class='pill' href='notifications.html'>Notifications</a><a class='btn btn-primary' href='ai-center.html'>Open AI Center</a></div>
+        </div>
+      </header>
+      <main class="container">
+        <section class="page-hero"><div class="panel"><p class="eyebrow">Dashboard</p><h1 style="font-size: clamp(2.3rem, 4vw, 4.2rem);">Welcome back, <span data-dashboard-name></span>.</h1><p>Your command center for requests, AI insights, helper momentum, and live community activity.</p></div></section>
+        <section class="mini-grid section">
+          <div class="stat-card"><p class="eyebrow">Trust score</p><div class="stat-value" data-stat-trust></div><p>Driven by solved requests and consistent support.</p></div>
+          <div class="stat-card"><p class="eyebrow">Helping</p><div class="stat-value" data-stat-helping></div><p>Requests where you are currently listed as a helper.</p></div>
+          <div class="stat-card"><p class="eyebrow">Open requests</p><div class="stat-value" data-stat-open></div><p>Community requests currently active across the feed.</p></div>
+          <div class="stat-card"><p class="eyebrow">AI pulse</p><div class="stat-value" data-stat-insights></div><p>Trend count detected in the latest request activity.</p></div>
+        </section>
+        <section class="dashboard-grid section">
+          <div class="stack">
+            <div class="section-head"><div><p class="section-kicker">Recent requests</p><h2>What the community needs right now</h2></div><a class='btn btn-secondary' href='/explore'>Go to feed</a></div>
+            <div class="stack" data-dashboard-requests></div>
+          </div>
+          <div class="stack">
+            <div class="panel"><p class="section-kicker">AI insights</p><h3>Suggested actions for you</h3><div data-dashboard-ai></div></div>
+            <div class="panel"><p class="section-kicker">Notifications</p><h3>Latest updates</h3><div class="notif-list" data-dashboard-notes></div></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

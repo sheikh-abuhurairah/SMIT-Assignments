@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpHub AI | Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body data-page="profile">
+    <header class="topbar">
+      <div class="container nav">
+        <a class='brand' href='index.html'><span class="brand-badge">H</span><span>HelpHub AI</span></a>
+        <nav class="nav-links"><a href='dashboard.html'>Dashboard</a><a href='onboarding.html'>Onboarding</a><a data-nav='profile' href='profile.html'>Profile</a></nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="page-hero"><div class="panel"><p class="eyebrow">Profile</p><h1 style="font-size: clamp(2.2rem, 4vw, 4rem);" data-profile-name></h1><p><span data-profile-role></span> • <span data-profile-location></span></p></div></section>
+      <section class="profile-grid section">
+        <div class="stack">
+          <div class="panel">
+            <p class="section-kicker">Public profile</p><h2>Skills and reputation</h2>
+            <div class="metric"><span>Trust score</span><strong data-profile-trust></strong></div>
+            <div class="metric"><span>Contributions</span><strong data-profile-contributions></strong></div>
+            <div class="stack">
+              <div><strong>Skills</strong><div class="tag-row" data-profile-skills style="margin-top:10px;"></div></div>
+              <div><strong>Badges</strong><div class="tag-row" data-profile-badges style="margin-top:10px;"></div></div>
+            </div>
+          </div>
+        </div>
+        <form class="form-card stack" data-profile-form>
+          <p class="section-kicker">Edit profile</p><h2>Update your identity</h2>
+          <div class="profile-form">
+            <div class="field"><label>Name</label><input name="name" type="text" /></div>
+            <div class="field"><label>Location</label><input name="location" type="text" /></div>
+            <div class="field-full"><label>Skills</label><input name="skills" type="text" /></div>
+            <div class="field-full"><label>Interests</label><input name="interests" type="text" /></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Save profile</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

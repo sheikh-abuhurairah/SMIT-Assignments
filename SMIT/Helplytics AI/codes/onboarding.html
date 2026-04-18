@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpHub AI | Onboarding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body data-page="onboarding">
+    <header class="topbar">
+      <div class="container nav">
+        <a class='brand' href='index.html'><span class="brand-badge">H</span><span>HelpHub AI</span></a>
+        <nav class="nav-links"><a href='dashboard.html'>Dashboard</a><a href='explore.html'>Explore</a><a href='profile.html'>Profile</a></nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="page-hero"><div class="panel"><p class="eyebrow">Onboarding</p><h1 style="font-size: clamp(2.2rem, 4vw, 4rem);">Shape your support identity with AI suggestions.</h1><p>Name your strengths, interests, and location so the system can recommend where you can help and where you may need backup.</p></div></section>
+      <section class="two-col section">
+        <form class="form-card stack" data-onboarding-form>
+          <div class="field"><label>Switch demo user</label><select data-user-switch></select></div>
+          <div class="form-grid">
+            <div class="field"><label>Name</label><input name="name" type="text" /></div>
+            <div class="field"><label>Location</label><input name="location" type="text" /></div>
+            <div class="field-full"><label>Skills</label><input name="skills" type="text" placeholder="JavaScript, UI/UX, Public Speaking" /></div>
+            <div class="field-full"><label>Interests</label><input name="interests" type="text" placeholder="Hackathons, mentoring, startups" /></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Save onboarding</button>
+        </form>
+        <aside class="panel stack"><div><p class="section-kicker">AI suggestions</p><h2>Your likely contribution map</h2></div><div data-onboarding-ai></div></aside>
+      </section>
+    </main>
+  </body>
+</html>
