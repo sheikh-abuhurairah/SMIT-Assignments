@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+
+  <div class="app-wrapper">
+    <div class="app-header">
+      <div class="badge"><i class="fas fa-circle"></i> Focus Mode</div>
+      <h1>Lumina <span>Tasks</span></h1>
+      <p>Your thoughts, organized beautifully.</p>
+    </div>
+
+    <div class="card">
+      <!-- Search -->
+      <div class="search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search your tasks…" />
+      </div>
+
+      <!-- Add form -->
+      <form class="add">
+        <input type="text" name="add" placeholder="What needs to be done?" autocomplete="off" required />
+        <button type="submit" class="btn">Add Todo</button>
+      </form>
+
+      <!-- List -->
+      <div class="section-label">
+        <span>Your Tasks</span>
+      </div>
+
+      <ul class="todos"></ul>
+
+      <div class="empty-state" id="empty-state">
+        <i class="fas fa-seedling"></i>
+        <p>No tasks yet — add your first one above!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

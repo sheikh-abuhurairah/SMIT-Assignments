@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Digital Clock</h1>
+
+        <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+
+        <div class="date">
+            <p id="date">Day, Date Month Year</p>
+        </div>
+
+        <!-- Stopwatch Box -->
+    <div class="stopwatch-container" style="margin-top:40px;">
+        <h1>Stopwatch</h1>
+        <div class="stopwatch">
+            <span id="sw-minutes">00</span>
+            <span>:</span>
+            <span id="sw-seconds">00</span>
+            <span>:</span>
+            <span id="sw-milisec">00</span>
+        </div>
+
+        <div class="sw-buttons" style="margin-top:20px;">
+            <button id="start-btn">Start</button>
+            <button id="stop-btn">Stop</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

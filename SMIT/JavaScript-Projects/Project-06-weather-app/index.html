@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1 class="title">🌦 Weather Dashboard</h1>
+
+  <div class="search-box">
+    <input id="cityInput" type="text" placeholder="Enter City Name">
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <p id="errorMsg"></p>
+
+  <div id="weatherCard" class="weather-card">
+
+      <div class="top">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon">
+      </div>
+
+      <h1 id="temperature"></h1>
+      <p id="condition"></p>
+
+      <div class="details">
+        <div class="detail-box">
+          <p>Humidity</p>
+          <h3 id="humidity"></h3>
+        </div>
+
+        <div class="detail-box">
+          <p>Wind Speed</p>
+          <h3 id="windSpeed"></h3>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

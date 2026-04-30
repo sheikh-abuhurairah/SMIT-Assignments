@@ -1,0 +1,141 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:#0f172a;
+color:white;
+}
+
+/* Animated Background */
+
+.bg-animation{
+position:absolute;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle at 20% 30%,#2563eb44,transparent),
+radial-gradient(circle at 80% 70%,#9333ea44,transparent),
+radial-gradient(circle at 50% 50%,#06b6d444,transparent);
+animation:moveBg 12s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+50%{transform:translate(-10%,-10%);}
+100%{transform:translate(0,0);}
+}
+
+/* APP */
+
+.app{
+text-align:center;
+}
+
+h1{
+margin-bottom:30px;
+font-weight:600;
+letter-spacing:1px;
+}
+
+/* CARD */
+
+.card{
+width:360px;
+padding:35px;
+border-radius:22px;
+
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.5);
+
+transition:.4s;
+animation:fadeIn .6s ease;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+}
+
+/* IMAGE */
+
+.img-wrapper{
+display:flex;
+justify-content:center;
+margin-bottom:15px;
+}
+
+#userImg{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid rgba(255,255,255,.3);
+transition:.5s;
+}
+
+/* DETAILS */
+
+.details p{
+margin:8px 0;
+opacity:.9;
+font-size:15px;
+}
+
+/* STATUS */
+
+.status{
+margin-top:12px;
+font-size:14px;
+color:#22d3ee;
+}
+
+/* BUTTON */
+
+button{
+margin-top:22px;
+padding:13px 26px;
+border:none;
+border-radius:40px;
+
+background:linear-gradient(45deg,#06b6d4,#6366f1);
+
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.07);
+box-shadow:0 0 15px #06b6d4;
+}
+
+button:disabled{
+opacity:.6;
+cursor:not-allowed;
+}
+
+/* CARD LOAD ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
