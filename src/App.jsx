@@ -1,67 +1,64 @@
-import React from "react";
-
 function App() {
-  const students = [
-    { id: 1, name: "Ali", marks: 95 },
-    { id: 2, name: "Ahmed", marks: 85 },
-    { id: 3, name: "Sara", marks: 75 },
-    { id: 4, name: "Ayesha", marks: 65 },
-    { id: 5, name: "Usman", marks: 55 },
-    { id: 6, name: "Hamza", marks: 45 },
-    { id: 7, name: "Abdulrehman", marks: 90 },
-    { id: 8, name: "Mujtaba", marks: 35 },
-    { id: 9, name: "Abuhurairah", marks: 87 },
-    { id: 6, name: "Sadia", marks: 75 },
+  const products = [
+    { id: 101, title: "Apple iPhone 15", price: 285000, status: true },
+    { id: 102, title: "Samsung Galaxy S24", price: 245000, status: true },
+    { id: 103, title: "Dell XPS 13 Laptop", price: 395000, status: false },
+    { id: 104, title: "Sony WH-1000XM5 Headphones", price: 98000, status: true },
+    { id: 105, title: "Apple Watch Series 9", price: 145000, status: true },
+    { id: 106, title: "LG 55-inch 4K Smart TV", price: 210000, status: false },
   ];
 
-  // Function to calculate grade
-  const getGrade = (marks) => {
-    if (marks >= 90 && marks <= 100) return "A";
-    else if (marks >= 80) return "B";
-    else if (marks >= 70) return "C";
-    else if (marks >= 60) return "D";
-    else if (marks >= 50) return "E";
-    else return "F";
-  };
+  const average =
+    products.reduce((sum, p) => sum + p.price, 0) / products.length;
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Student Result System</h1>
+    <div>
+      <h1>Products Assignment</h1>
 
-      {students.map((student) => (
-        <div key={student.id}>
-          <h3>Name: {student.name}</h3>
-          <p>Marks: {student.marks}</p>
-          <p>Grade: {getGrade(student.marks)}</p>
+      <h2>1. Low to High</h2>
+      {[...products]
+        .sort((a, b) => a.price - b.price)
+        .map(p => (
+          <p key={p.id}>{p.title} - Rs. {p.price}</p>
+        ))}
 
-          {student.marks >= 50 ? (
-            <p style={{ color: "green" }}>Result: Pass</p>
-          ) : (
-            <p style={{ color: "red" }}>Result: Fail</p>
-          )}
+      <h2>2. Price &gt; 45000 (High to Low)</h2>
+      {products
+        .filter(p => p.price > 45000)
+        .sort((a, b) => b.price - a.price)
+        .map(p => (
+          <p key={p.id}>{p.title} - Rs. {p.price}</p>
+        ))}
 
-          {/* 1. HR after each result */}
-          <hr />
-        </div>
+      <h2>3. Price +10%</h2>
+      {products
+        .map(p => ({ ...p, price: Math.round(p.price * 1.1) }))
+        .map(p => (
+          <p key={p.id}>{p.title} - Rs. {p.price}</p>
+        ))}
+
+      <h2>4. Starts with A</h2>
+      {products
+        .filter(p => p.title.toLowerCase().startsWith("a"))
+        .map(p => (
+          <p key={p.id}>{p.title}</p>
+        ))}
+
+      <h2>5. Top 3 Most Expensive</h2>
+      {[...products]
+        .sort((a, b) => b.price - a.price)
+        .slice(0, 3)
+        .map(p => (
+          <p key={p.id}>{p.title} - Rs. {p.price}</p>
+        ))}
+
+      <h2>6. Above/Below Average</h2>
+      {products.map(p => (
+        <p key={p.id}>
+          {p.title} - Rs. {p.price} (
+          {p.price >= average ? "Above Average" : "Below Average"})
+        </p>
       ))}
-
-      {/* 2. Failed Students Component */}
-      <h2>Failed Students</h2>
-
-      {students.filter((student) => student.marks < 50).length > 0 ? (
-        students
-          .filter((student) => student.marks < 50)
-          .map((student) => (
-            <div key={student.id}>
-              <p>
-                {student.name} - {student.marks} Marks (Grade:{" "}
-                {getGrade(student.marks)})
-              </p>
-            </div>
-          ))
-      ) : (
-        <p>No failed students.</p>
-      )}
     </div>
   );
 }
